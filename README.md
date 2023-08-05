@@ -1,4 +1,4 @@
-# Custom-AI
+# 🧠 Custom-AI
 
 ### AI trained on **custom** user data.
 
