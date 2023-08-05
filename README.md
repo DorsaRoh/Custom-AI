@@ -32,8 +32,10 @@ pip install -r requirements.txt
 ```shell
 streamlit run app.py
 ```
-3.**Navigate to localhost:8501 in your web browser to access the app.**
+3.
+Navigate to localhost:8501 in your web browser to access the app.
 
-4.**Enter your OpenAI API key in the *apikey.py* folder.**
+4.
+Enter your OpenAI API key in the *apikey.py* folder.
 
  
