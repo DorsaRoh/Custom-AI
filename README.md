@@ -3,7 +3,7 @@
 ### AI trained on **custom** user data.
 
 ## The AI can:
-- 📁 Use your own custom data
+- 📁 Use your own data
 - 🔠 Memorize the conversation
 - 💬 Save the conversation
 
@@ -14,7 +14,6 @@ Data is saved in the **'data'** folder!
 ### Clone the repository
 ```shell
 git clone https://github.com/DorsaRoh/Custom-AI.git
-cd Custom-AI
 ```
 
 ### Install dependencies
