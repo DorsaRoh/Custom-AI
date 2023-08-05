@@ -11,13 +11,6 @@ Data is saved in the **'data'** folder!
 
 ## Installation
 
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Python 3.7 or later
-- [List any other prerequisites here]
-
 ### Clone the repository
 ```shell
 git clone https://github.com/DorsaRoh/Custom-AI.git
