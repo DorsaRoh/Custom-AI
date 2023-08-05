@@ -36,5 +36,5 @@ Navigate to localhost:8501 in your web browser to access the app.
 Enter your OpenAI API key in the *key.py* folder.
 
 
- ### Sample Uses
+ ## Sample Uses
 See the [PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20PatientGPT.AI) sample case: A medical sample use case of CustomAI, where doctors can upload data of their patients and have AI diagnose them for desired diseases and/or conditions.
