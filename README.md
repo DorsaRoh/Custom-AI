@@ -17,6 +17,8 @@ git clone https://github.com/DorsaRoh/Custom-AI.git
 ```
 
 ### Install dependencies
+
+1. 
 ```shell
 pip install langchain openai streamlit pdfreader wikipedia-api streamlit
 ```
@@ -26,12 +28,12 @@ pip install -r requirements.txt
 ```
 
 ### Usage
+2. 
 ```shell
 streamlit run app.py
 ```
+3.**Navigate to localhost:8501 in your web browser to access the app.**
 
-**Navigate to localhost:8501 in your web browser to access the app.**
-
-**Enter your OpenAI API key in the *apikey.py* folder.
+4.**Enter your OpenAI API key in the *apikey.py* folder.**
 
  
