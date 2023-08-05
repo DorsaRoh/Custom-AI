@@ -1,4 +1,12 @@
-# Bring in deps
+"""
+This is a Python script that serves as a frontend for a conversational AI model built with the `langchain` and `llms` libraries.
+The code creates a web application using Streamlit, a Python library for building interactive web apps.
+# Author: Dorsa Rohani
+# Date: AUgust 04, 2023
+"""
+
+
+# Import necessary libraries
 import os 
 import openai
 
@@ -10,6 +18,7 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.llms import OpenAI
 from langchain.vectorstores import Chroma
+
 import streamlit as st 
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -23,8 +32,11 @@ from apikey import APIKEY #import api key from apikey.py
 os.environ['OPENAI_API_KEY'] = APIKEY
 
 
+# Set Streamlit page configuration
+st.set_page_config(page_title='🧠 Custom-AI', layout='wide')
+
 # Side bar api key
-openai_api_key = st.sidebar.text_input('OpenAI API Key')
+openai_api_key = st.sidebar.text_input('OpenAI API Key', type="password")
 st.sidebar.markdown("*Please enter your OpenAI API key*")
 
  #If invalid/no api key entered, show warning
@@ -37,8 +49,8 @@ def valid_apikey():
 
 
 # Title
-st.title('Custom-AI')
-st.text('AI trained on your custom data, powered by - LangChain + OpenAI + Streamlit')
+st.title('🧠 Custom-AI')
+st.write('AI trained on your custom data, powered by LangChain + OpenAI + Streamlit')
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
