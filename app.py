@@ -36,7 +36,7 @@ def valid_apikey():
 
 
 # Title
-st.title('CustomAI')
+st.title('Custom-AI')
 st.text('AI trained on your custom data, powered by - LangChain + OpenAI + Streamlit')
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
