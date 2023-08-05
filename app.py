@@ -19,8 +19,8 @@ from langchain.utilities import WikipediaAPIWrapper
 
 from pdfreader import PDFDocument, SimplePDFViewer
 
-from apikey import TEST_APIKEY #import api key from apikey.py
-os.environ['OPENAI_API_KEY'] = TEST_APIKEY
+from apikey import APIKEY #import api key from apikey.py
+os.environ['OPENAI_API_KEY'] = APIKEY
 
 
 # Side bar api key

@@ -1,5 +1,3 @@
 
-TEST_APIKEY = "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"
-
-
-#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
+# Enter your API key
+APIKEY = "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"

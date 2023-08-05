@@ -1,6 +1,6 @@
 # Custom-AI
 
-Custom-AI is a Streamlit app that utilizes LangChain and OpenAI ChatGPT to enable users to upload their own data for the model to use.
+Custom-AI is a web app that enable users to upload their **own data** for the model to use.
 
 [Website](https://your-demo-url.com)
 
@@ -9,6 +9,7 @@ Custom-AI is a Streamlit app that utilizes LangChain and OpenAI ChatGPT to enabl
 - 🔠 Memorize the conversation
 - 💬 Save the conversation
 
+Data is saved in the **'data'** folder.
 
 ## Installation
 
@@ -21,7 +22,7 @@ Make sure you have the following installed:
 
 ### Clone the repository
 ```shell
-git clone https://github.com/your-username/Custom-AI.git
+git clone https://github.com/DorsaRoh/Custom-AI.git
 cd Custom-AI
 ```
 
