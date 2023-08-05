@@ -7,7 +7,8 @@
 - 🔠 Memorize the conversation
 - 💬 Save the conversation
 
-Data is saved in the **'data'** folder!
+Data is saved in the **'data'** folder! 
+Note: Accepted data types are .pdf and .txt files
 
 ## Installation
 
