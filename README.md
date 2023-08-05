@@ -11,14 +11,13 @@ Data is saved in the **'data'** folder!
 
 ## Installation
 
-### Clone the repository
+### 1. Clone the repository
 ```shell
 git clone https://github.com/DorsaRoh/Custom-AI.git
 ```
 
-### Install dependencies
+### 2. Install dependencies
 
-1. 
 ```shell
 pip install langchain openai streamlit pdfreader wikipedia-api streamlit
 ```
@@ -27,13 +26,13 @@ or
 pip install -r requirements.txt
 ```
 
-### Usage
-2. 
+### 3. Usage
+ 
 ```shell
 streamlit run app.py
 ```
-3. Navigate to localhost:8501 in your web browser to access the app.
+Navigate to localhost:8501 in your web browser to access the app.
 
-4. Enter your OpenAI API key in the *apikey.py* folder.
+Enter your OpenAI API key in the *apikey.py* folder.
 
  
