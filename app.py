@@ -25,6 +25,7 @@ os.environ['OPENAI_API_KEY'] = APIKEY
 
 # Side bar api key
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
+st.sidebar.markdown("*Please enter your OpenAI API key*")
 
  #If invalid/no api key entered, show warning
 def valid_apikey():

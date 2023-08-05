@@ -30,6 +30,10 @@ cd Custom-AI
 ```shell
 pip install langchain openai streamlit pdfreader wikipedia-api streamlit
 ```
+or
+```shell
+pip install -r requirements.txt
+```
 
 ### Usage
 ```shell
