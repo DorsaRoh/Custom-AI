@@ -36,7 +36,7 @@ os.environ['OPENAI_API_KEY'] = APIKEY
 st.set_page_config(page_title='🧠 Custom-AI', layout='wide')
 
 # Side bar api key
-openai_api_key = st.sidebar.text_input('OpenAI API Key', type="password")
+openai_api_key = st.sidebar.text_input('OpenAI API Key')
 st.sidebar.markdown("*Please enter your OpenAI API key*")
 
  #If invalid/no api key entered, show warning

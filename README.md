@@ -1,15 +1,13 @@
 # Custom-AI
 
-AI trained on **custom** user data.
-
-[Website](https://your-demo-url.com)
+### AI trained on **custom** user data.
 
 ## The AI can:
 - 📁 Use your own custom data
 - 🔠 Memorize the conversation
 - 💬 Save the conversation
 
-Data is saved in the **'data'** folder.
+Data is saved in the **'data'** folder!
 
 ## Installation
 
