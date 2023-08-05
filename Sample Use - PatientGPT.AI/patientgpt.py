@@ -19,8 +19,8 @@ from langchain.utilities import WikipediaAPIWrapper
 
 from pdfreader import PDFDocument, SimplePDFViewer
 
-from apikey import TEST_APIKEY #import api key from apikey.py
-os.environ['OPENAI_API_KEY'] = TEST_APIKEY
+from key import APIKEY #import api key
+os.environ['OPENAI_API_KEY'] = APIKEY
 
 
 # Side bar api key
@@ -167,6 +167,3 @@ with st.form('additional_questions_form'):
     valid_apikey()
     if submitted and valid_apikey():
         generate_questions_response(query)
-
-
-
