@@ -1,6 +1,6 @@
 # Custom-AI
 
-Custom-AI is a web app that enable users to upload their **own data** for the model to use.
+AI trained on **custom** user data.
 
 [Website](https://your-demo-url.com)
 
