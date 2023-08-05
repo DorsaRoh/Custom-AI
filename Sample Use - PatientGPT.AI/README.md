@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ### 3. Usage
  
 ```shell
-streamlit run app.py
+streamlit run patientgpt.py
 ```
 Navigate to localhost:8501 in your web browser to access the app.
 
