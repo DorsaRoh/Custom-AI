@@ -3,6 +3,8 @@
 ### AI trained on **custom** user data.
 Powered by OpenAI + Langchain + Streamlit
 
+![App Image](https://github.com/DorsaRoh/CustomAI/blob/main/content/app.png)
+
 ## The AI can:
 - 📁 Use your own data
 - 🔠 Memorize the conversation
