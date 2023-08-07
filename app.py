@@ -28,34 +28,50 @@ from langchain.utilities import WikipediaAPIWrapper
 
 from pdfreader import PDFDocument, SimplePDFViewer
 
-from key import APIKEY #import api key from key.py
-os.environ['OPENAI_API_KEY'] = APIKEY
 
 
+# Set Streamlit page configuration & LOGO
+from PIL import Image
+# Loading Image using PIL
+im = Image.open('content/logo.png')
+# Adding Image to web app
+st.set_page_config(page_title='CustomAI', layout='wide', page_icon = im)
 
-# Set Streamlit page configuration
-st.set_page_config(page_title='🧠 CustomAI', layout='wide')
 
+# Side bar
 
 # Side bar api key
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 st.sidebar.markdown("*Please enter your OpenAI API key*")
+os.environ['OPENAI_API_KEY'] = openai_api_key
 
 st.write("#")
 st.sidebar.title(":blue[CustomAI]")
 st.sidebar.markdown("Train AI with custom data, revolutionizing personalized AI. Here are sample use cases:")
 
-# RealizeAI
-st.sidebar.subheader(":blue[1. [RealizeAI](https://realize-ai.com/)]")
-st.sidebar.markdown("*Think your unique knowledge has no real-world value?*")
-st.sidebar.markdown("*http://realize-ai.com/*")
+# CustomAI
+st.sidebar.subheader(":blue[1. [RealizeAI](https://github.com/DorsaRoh/Custom-AI/tree/main/RealizeAI)]")
+st.sidebar.markdown("*Think your unique knowledge has no real-world value? With RealizeAI, turn even the most obscure ideas into actionable tasks.*")
 # PatientGPT.AI
-st.sidebar.subheader(":blue[2. [PatientGPT.AI](https://realize-ai.com/)]")
-st.sidebar.markdown("*Think your unique knowledge has no real-world value?*")
-st.sidebar.markdown("*[Github - PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20PatientGPT.AI)*")
+st.sidebar.subheader(":blue[2. [PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/PatientGPT.AI)]")
+st.sidebar.markdown("*Doctors upload patient data, and CustomAI determines a diagnosis and specialized insight — each one crafted uniquely, for whichever disease(s) the doctor chooses.*")
 
-# Sample use cases
 
+
+# Store the initial value of widgets in session state
+if "visibility" not in st.session_state:
+    st.session_state.visibility = "visible"
+    st.session_state.disabled = False
+
+
+# APP LAYOUT
+# Title
+st.title('CustomAI.')
+st.subheader(':blue[Build AI trained on *your* custom data.]')
+st.markdown("___")
+
+#columns for layout
+col1, col2 = st.columns(2)
 
 
  #If invalid/no api key enteblue, show warning
@@ -65,18 +81,13 @@ def valid_apikey():
     else:
         st.warning('Invalid API Key', icon='⚠')
         return False
-
-
-# Title
-st.title('Custom-AI')
-st.subheader(':blue[Train AI on *your* custom data.]')
-st.write("#")
-
+    
 if valid_apikey():
-    st.success('Valid API Key', icon='✅')
+    col2.markdown(":blue[AI Response:]")
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
+
 
 # Langchain LLM that feeds off of user data
 def load_model():
@@ -116,8 +127,7 @@ def extract_text_from_pdf(file_path):
     return text
 
 def fileSaver():
-    #st.title("File Uploader and Saver")
-    uploaded_file = st.file_uploader("Input data", type='.pdf')
+    uploaded_file = st.file_uploader("Upload your data", type='.pdf')
 
     if uploaded_file is not None and valid_apikey():
         with open(os.path.join("data", uploaded_file.name), "wb") as f:
@@ -130,7 +140,6 @@ def fileSaver():
         with open(os.path.splitext(file_path)[0]+".txt", "w") as f: 
             f.write(text_content)
 
-fileSaver()
 
 
 # Prompt templates for Langchain
@@ -150,37 +159,16 @@ class PromptTemplate:
 
 title_template = PromptTemplate(
     input_variables=['topic'], 
-    template='Answer with the best possible answer to {topic} using data'
+    template='Provide a detailed and clear and aesthetic of how can one apply the knowledge of {topic} in a real-life context and world to yield good results in money, human advancement, personal happiness, and other beneficial factors? Are there any potential applications, especially considering realistic constraints?'
 )
 
 script_template = PromptTemplate(
     input_variables=['title', 'wikipedia_research'], 
     template=(
-        "ChatGPT, considering your last update in September 2021 and leveraging all the information you have up to that point, provide a detailed and evidence-based answer on {title}. Please be specific, cite any relevant information, and leverage {wikipedia_research}"
+        "Present a thorough, well-articulated, and aesthetically appealing guide on the practical application of {title} in real-world scenarios. How might leveraging insights from this topic lead to tangible benefits, such as financial prosperity, forward strides in human development, heightened personal satisfaction, and other advantageous outcomes? In this exploration, are there specific applications that stand out, especially when taking into account practical and realistic limitations or challenges? Leverage {wikipedia_research}"
     )
 )
 
-
-chain = load_model()
-diagnosis = st.text_input("Ask AI:")
-wiki = WikipediaAPIWrapper()
-
-if diagnosis and valid_apikey():
-    try:
-        title_prompt = title_template.format(topic=diagnosis)
-        title_result = chain({"question": title_prompt, "chat_history": chat_history})
-        chat_history.append((title_prompt, title_result['answer']))
-
-        wiki = WikipediaAPIWrapper()
-        wiki_research = wiki.run(diagnosis) 
-
-        script_prompt = script_template.format(title=diagnosis, wikipedia_research=wiki_research)
-
-        script_result = chain({"question": script_prompt, "chat_history": chat_history})
-        st.write(f"AI: {script_result['answer']}")
-        chat_history.append((script_prompt, script_result['answer']))
-    except TypeError as e:
-        st.write("An error occurblue: ", e)
 
 
 
@@ -197,12 +185,48 @@ def generate_questions_response(input_text):
         st.write(f"AI: {result['answer']}")
         chat_history.append((query, result['answer']))
 
-with st.form('additional_questions_form'):
-    query = st.text_area('Enter additional questions and/or notes:', '...')    
-    submitted = st.form_submit_button(label='Submit')
-    valid_apikey()
-    if submitted and valid_apikey():
-        generate_questions_response(query)
+#LAYOUT FOR COLUMN 1
+with col1:
+    chain = load_model()
+
+    placeholder_text_prompt = "Analyze my sales data and predict my next month's revenue"
+    script = st.text_input("Enter prompt:",value="", help="", key="prompt_input", placeholder=placeholder_text_prompt)
+    
+    fileSaver()
+
+    with st.form('additional_questions_form'):
+        placeholder_text_additional = "In what industries will our product have the most transformative impact?"
+        query = st.text_area('Enter additional questions:',value="", help="", key="additional_input", placeholder=placeholder_text_additional)    
+        submitted = st.form_submit_button(label='Submit')
+        valid_apikey()
+        if submitted and valid_apikey():
+            generate_questions_response(query)
+    
+
+wiki = WikipediaAPIWrapper()
+
+
+if script and valid_apikey():
+    try:
+        title_prompt = title_template.format(topic=script)
+        title_result = chain({"question": title_prompt, "chat_history": chat_history})
+        chat_history.append((title_prompt, title_result['answer']))
+
+        wiki = WikipediaAPIWrapper()
+        wiki_research = wiki.run(script) 
+
+        script_prompt = script_template.format(title=script, wikipedia_research=wiki_research)
+
+        
+        script_result = chain({"question": script_prompt, "chat_history": chat_history})
+        with col2:
+            st.write(f"AI: {script_result['answer']}")
+            
+            chat_history.append((script_prompt, script_result['answer']))
+    except TypeError as e:
+        st.write("An error occurred: ", e)
 
 
 
+# Hide Streamlit's default footer
+st.markdown('<style>footer{visibility:hidden;}</style>', unsafe_allow_html=True)
