@@ -39,6 +39,6 @@ Navigate to localhost:8501 in your web browser to access the app.
 
 
  ## Sample Uses
-[PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20PatientGPT.AI) A medical sample use case of CustomAI, where doctors can upload data of their patients and have AI diagnose them for desired diseases and/or conditions.
-[RealizeAI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20RealizeAI)
+- [PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20PatientGPT.AI) A medical sample use case of CustomAI, where doctors can upload data of their patients and have AI diagnose them for desired diseases and/or conditions.
+- [RealizeAI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20RealizeAI)
 Think your unique knowledge has no real-world value? With Realize-AI, turn even the most obscure ideas into actionable tasks.
