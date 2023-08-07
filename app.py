@@ -32,14 +32,33 @@ from key import APIKEY #import api key from key.py
 os.environ['OPENAI_API_KEY'] = APIKEY
 
 
+
 # Set Streamlit page configuration
 st.set_page_config(page_title='🧠 CustomAI', layout='wide')
+
 
 # Side bar api key
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 st.sidebar.markdown("*Please enter your OpenAI API key*")
 
- #If invalid/no api key entered, show warning
+st.write("#")
+st.sidebar.title(":blue[CustomAI]")
+st.sidebar.markdown("Train AI with custom data, revolutionizing personalized AI. Here are sample use cases:")
+
+# RealizeAI
+st.sidebar.subheader(":blue[1. [RealizeAI](https://realize-ai.com/)]")
+st.sidebar.markdown("*Think your unique knowledge has no real-world value?*")
+st.sidebar.markdown("*http://realize-ai.com/*")
+# PatientGPT.AI
+st.sidebar.subheader(":blue[2. [PatientGPT.AI](https://realize-ai.com/)]")
+st.sidebar.markdown("*Think your unique knowledge has no real-world value?*")
+st.sidebar.markdown("*[Github - PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/Sample%20Use%20-%20PatientGPT.AI)*")
+
+# Sample use cases
+
+
+
+ #If invalid/no api key enteblue, show warning
 def valid_apikey():
     if openai_api_key.startswith('sk-'):
         return True
@@ -49,8 +68,10 @@ def valid_apikey():
 
 
 # Title
-st.title('🧠 Custom-AI')
-st.write('AI trained on your custom data, powered by LangChain + OpenAI + Streamlit')
+st.title('Custom-AI')
+st.subheader(':blue[Train AI on *your* custom data.]')
+st.write("#")
+
 if valid_apikey():
     st.success('Valid API Key', icon='✅')
 
@@ -159,7 +180,7 @@ if diagnosis and valid_apikey():
         st.write(f"AI: {script_result['answer']}")
         chat_history.append((script_prompt, script_result['answer']))
     except TypeError as e:
-        st.write("An error occurred: ", e)
+        st.write("An error occurblue: ", e)
 
 
 
