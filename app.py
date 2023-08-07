@@ -33,7 +33,7 @@ os.environ['OPENAI_API_KEY'] = APIKEY
 
 
 # Set Streamlit page configuration
-st.set_page_config(page_title='🧠 Custom-AI', layout='wide')
+st.set_page_config(page_title='🧠 CustomAI', layout='wide')
 
 # Side bar api key
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
@@ -51,6 +51,8 @@ def valid_apikey():
 # Title
 st.title('🧠 Custom-AI')
 st.write('AI trained on your custom data, powered by LangChain + OpenAI + Streamlit')
+if valid_apikey():
+    st.success('Valid API Key', icon='✅')
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
