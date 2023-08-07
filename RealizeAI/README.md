@@ -1,8 +1,7 @@
 # 🧠 Realize AI
 
 
-
-
+### Think your unique knowledge has no real-world value? With Realize-AI, turn even the most obscure ideas into actionable tasks.
 ### AI trained on **custom** user data.
 
 ## The AI can:
