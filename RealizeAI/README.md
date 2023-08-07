@@ -32,7 +32,11 @@ pip install -r requirements.txt
 ```
 
 ### 3. Usage
- 
+
+```shell
+cd RealizeAI
+```
+
 ```shell
 streamlit run app.py
 ```
