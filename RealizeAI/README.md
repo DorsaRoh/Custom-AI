@@ -39,7 +39,7 @@ cd RealizeAI
 ```shell
 streamlit run app.py
 ```
-Navigate to localhost:8501 in your web browser to access the app.
+Navigate to local host in your web browser to access the app.
 
 🚨 **Enter your OpenAI API key in the *key.py* folder.**
 
