@@ -1,6 +1,7 @@
 # 🧠 Custom-AI
 
 ### AI trained on **custom** user data.
+Powered by OpenAI + Langchain + Streamlit
 
 ## The AI can:
 - 📁 Use your own data
