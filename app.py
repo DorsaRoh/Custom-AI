@@ -41,8 +41,9 @@ st.set_page_config(page_title='CustomAI', layout='wide', page_icon = im)
 # Side bar
 
 # Side bar api key
-openai_api_key = st.sidebar.text_input('OpenAI API Key')
-st.sidebar.markdown("*Please enter your OpenAI API key*")
+placeholder_text_prompt = "Please enter your key"
+openai_api_key = st.sidebar.text_input("OpenAI API Key",value="", help="", key="api_input", placeholder=placeholder_text_prompt)
+
 os.environ['OPENAI_API_KEY'] = openai_api_key
 
 st.write("#")
@@ -190,7 +191,7 @@ with col1:
     chain = load_model()
 
     placeholder_text_prompt = "Analyze my sales data and predict my next month's revenue"
-    script = st.text_input("Enter prompt:",value="", help="", key="prompt_input", placeholder=placeholder_text_prompt)
+    script = st.text_input("Enter Prompt:",value="", help="", key="prompt_input", placeholder=placeholder_text_prompt)
     
     fileSaver()
 
