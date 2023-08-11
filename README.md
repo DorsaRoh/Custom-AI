@@ -38,7 +38,7 @@ streamlit run app.py
 ```
 Navigate to local host 1 in your web browser to access the app.
 
-🚨 **Enter your OpenAI API key in the *key.py* folder.**
+🚨 **Enter your OpenAI API key in the application's sidebar/input field.**
 
 
  ## Sample Uses
