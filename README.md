@@ -40,6 +40,7 @@ Navigate to local host 1 in your web browser to access the app.
 
 🚨 **Enter your OpenAI API key in the application's sidebar/input field.**
 
+Change the prompt templates according to your needs and requirements.
 
  ## Sample Uses
 - [PatientGPT.AI](https://github.com/DorsaRoh/Custom-AI/tree/main/PatientGPT.AI) A medical sample use case of CustomAI, where doctors can upload data of their patients and have AI diagnose them for desired diseases and/or conditions.
