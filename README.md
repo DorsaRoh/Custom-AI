@@ -5,7 +5,8 @@ Powered by OpenAI + Langchain + Streamlit
 
 ![App Image](https://github.com/DorsaRoh/CustomAI/blob/main/content/app.png)
 
-[![Watch the video](https://youtu.be/qhgamzZxZq4)
+[![Video Name](https://img.youtube.com/vi/qhgamzZxZq4/maxresdefault.jpg)](https://youtu.be/qhgamzZxZq4)
+
 
 [![Video Demo](https://img.youtube.com/vi/qhgamzZxZq4D/maxresdefault.jpg)](https://youtu.be/qhgamzZxZq4)
 
