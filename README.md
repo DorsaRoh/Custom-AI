@@ -7,6 +7,9 @@ Powered by OpenAI + Langchain + Streamlit
 
 [![Watch the video](https://youtu.be/qhgamzZxZq4)
 
+[![Video Demo](https://img.youtube.com/vi/qhgamzZxZq4D/maxresdefault.jpg)](https://youtu.be/qhgamzZxZq4)
+
+
 Leverages Python, Langchain and OpenAI's ChatGPT to empower you to chat with your data, and build AI trained on your PDFs, fast and accessibly. The future of AI isn't just intelligence - it's personalization.
 
 ## The AI can:
