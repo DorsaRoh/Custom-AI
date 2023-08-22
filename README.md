@@ -23,7 +23,12 @@ Note: Accepted data types are .pdf and .txt files
 git clone https://github.com/DorsaRoh/Custom-AI.git
 ```
 
-### 2. Install dependencies
+### 2. Enter directory
+```shell
+cd CustomAI
+```
+
+### 3. Install dependencies
 
 ```shell
 pip install langchain openai streamlit pdfreader wikipedia-api streamlit
@@ -33,7 +38,7 @@ or
 pip install -r requirements.txt
 ```
 
-### 3. Usage
+### 4. Usage
  
 ```shell
 streamlit run app.py
