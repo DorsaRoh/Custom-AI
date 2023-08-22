@@ -45,7 +45,7 @@ streamlit run app.py
 ```
 Navigate to local host 1 in your web browser to access the app.
 
-🚨 **Enter your OpenAI API key in the application's sidebar/input field.**
+🚨 **You must enter your OpenAI API key. An error will show until you enter your OpenAI API key in the application's sidebar/input field.**
 
 Change the prompt templates according to your needs and requirements.
 
