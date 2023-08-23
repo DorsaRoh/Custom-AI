@@ -3,6 +3,7 @@
 ### AI trained on **custom** user data.
 Powered by OpenAI + Langchain + Streamlit
 
+Video Demo: https://youtu.be/qhgamzZxZq4
 ![App Image](https://github.com/DorsaRoh/CustomAI/blob/main/content/app.png)
 
 
