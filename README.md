@@ -3,10 +3,10 @@
 ### AI trained on **custom** user data.
 Powered by OpenAI + Langchain + Streamlit
 
-Video Demo: https://youtu.be/qhgamzZxZq4
 
 ![App Image](https://github.com/DorsaRoh/CustomAI/blob/main/content/app.png)
 
+Video Demo: https://youtu.be/qhgamzZxZq4
 
 Leverages Python, Langchain and OpenAI's ChatGPT to empower you to chat with your data, and build AI trained on your PDFs, fast and accessibly. The future of AI isn't just intelligence - it's personalization.
 
