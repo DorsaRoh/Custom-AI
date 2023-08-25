@@ -28,7 +28,7 @@ git clone https://github.com/DorsaRoh/Custom-AI.git
 
 ### 2. Enter directory
 ```shell
-cd CustomAI
+cd Custom-AI
 ```
 
 ### 3. Install dependencies
