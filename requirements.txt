@@ -2,4 +2,6 @@ langchain
 openai
 streamlit
 pdfreader
-wikipedia-api
+wikipedia
+unstructured
+unstructured[pdf]
