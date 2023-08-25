@@ -32,7 +32,7 @@ cd Custom-AI
 ```
 
 ### 3. Install dependencies
-Ensure you have chromadb installed.
+**Ensure you have chromadb installed.**
 
 ```shell
 pip install langchain openai streamlit pdfreader wikipedia-api streamlit unstructured unstructured[pdf]
